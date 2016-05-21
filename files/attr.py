@@ -145,11 +145,11 @@ def _run_attr(module,cmd):
 def main():
     module = AnsibleModule(
         argument_spec = dict(
-            path = dict(required=False, aliases=['name']),
-            attr = dict(required=False),
+            path = dict(required=False, aliases=['name'],type='path'),
+            attr = dict(required=False),type='str',
             state = dict(required=False, default='present', choices=[ 'present', 'absent' ], type='str'),
             recursive = dict(required=False, type='bool', default=False),
-            filelist = dict(required=False),
+            filelist = dict(required=False,type='path'),
         ),
         supports_check_mode=True,
     )
