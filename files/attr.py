@@ -21,7 +21,7 @@ version_added: "2.1"
 short_description: get/set/unset attributes on a Linux file system
 description:
      - Manages Linux filesystem attributes, requires I(chattr)/I(lsattr)/I(xargs) utilities.
-Note that usually only superuser or process with system capability can change this attributes.
+       Note that usually only superuser or process with system capability can change this attributes.
 options:
   path:
     required: false
