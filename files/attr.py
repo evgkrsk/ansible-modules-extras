@@ -130,7 +130,8 @@ def _run_attr(module,cmd):
     '''
     try:
         (rc, out, err) = module.run_command(' '.join(cmd), check_rc=True)
-    except Exception, e:
+    except Exception:
+        e = get_exception()
         module.fail_json(msg="%s!" % e)
 
     result = {}
