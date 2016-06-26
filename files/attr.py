@@ -147,8 +147,8 @@ def main():
     module = AnsibleModule(
         argument_spec = dict(
             path = dict(required=False, aliases=['name'],type='path'),
-            attr = dict(required=False),type='str',
-            state = dict(required=False, default='present', choices=[ 'present', 'absent' ], type='str'),
+            attr = dict(required=False,type='str'),
+            state = dict(required=False, default='present', choices=[ 'present', 'absent' ]),
             recursive = dict(required=False, type='bool', default=False),
             filelist = dict(required=False,type='path'),
         ),
